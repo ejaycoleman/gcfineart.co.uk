@@ -1,5 +1,14 @@
-import { Avatar, Card, CardContent, Grid, Typography } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Grid,
+  Typography,
+} from "@mui/material";
 import bg from "./bg.jpg";
+import gabby from "./gabby.jpg";
 
 const App = () => {
   return (
@@ -26,7 +35,9 @@ const App = () => {
               flexDirection: "column",
             }}
           >
-            <Avatar sx={{ width: 90, height: 90 }}>GC</Avatar>
+            <Avatar sx={{ width: 90, height: 90 }} src={gabby}>
+              GC
+            </Avatar>
             <Typography variant="h3" style={{ marginTop: 20 }}>
               Gabrielle Cummings
             </Typography>
@@ -35,6 +46,15 @@ const App = () => {
             </Typography>
           </div>
         </CardContent>
+        <CardActions>
+          <Button
+            variant="contained"
+            href="https://instagram.com/gabrielle.fineart"
+            target="_blank"
+          >
+            Instagram
+          </Button>
+        </CardActions>
       </Card>
     </Grid>
   );
