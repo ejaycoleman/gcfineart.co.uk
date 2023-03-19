@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  Chip,
   Grid,
   Typography,
 } from "@mui/material";
@@ -41,14 +42,34 @@ const App = () => {
             <Typography variant="h3" style={{ marginTop: 20 }}>
               Gabrielle Cummings
             </Typography>
+            <div style={{ marginTop: 10, marginBottom: 20 }}>
+              {[
+                "nostalgia",
+                "materiality",
+                "poetry",
+                "installation",
+                "alternative photography",
+              ].map((label) => (
+                <Chip
+                  sx={{ mx: 1 }}
+                  label={label}
+                  variant="outlined"
+                  color="secondary"
+                />
+              ))}
+            </div>
             <Typography sx={{ mt: 1.5 }} color="text.secondary">
-              Fine Art / Curation
+              Gabrielle Cummings is an emerging fine artist from London. She
+              works with installation, combining alternative photography with
+              the 3-dimensional. Her themes currently revolve around materiality
+              and memory; creating immersive exhibtiions that lead the audience
+              into a shared sense of nostalgia.
             </Typography>
           </div>
         </CardContent>
-        <CardActions>
+        <CardActions style={{ justifyContent: "center" }}>
           <Button
-            variant="contained"
+            variant="outlined"
             href="https://instagram.com/gabrielle.fineart"
             target="_blank"
           >
